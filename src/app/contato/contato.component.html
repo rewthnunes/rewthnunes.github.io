@@ -1,0 +1,73 @@
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+<div class="container-fluid" style="text-align:center;"><br>
+    <div class="container-fluid">     
+        <div class="row">
+        <div class="col-sm">
+            <div class="container">
+                <h3>Fale Conosco</h3>
+                <p> Deixe um comentário, sugestão, elogio ou crítica. Em breve entraremos em contato com você! </p>
+                <form class="form-inline">
+
+                    <div class="form-group col-sm-12" style="margin-bottom: 10px;">
+                        <div class="form-group col-sm-12">
+                            <div class="alert {{classeCss}}" role="alert" style="width: 100%" *ngIf="flagAlert">
+                                <strong>Aviso:</strong> &nbsp; {{message}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="fechaAviso()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-12" style="margin-bottom: 10px;">
+                        <div class="form-group col-sm-2"><b for="nome">Nome:</b></div>
+                        <div class="form-group col-sm-10">
+                            <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" 
+                            [(ngModel)]="object.nome" [ngModelOptions]="{standalone: true}" style="width: 100%">
+                        </div>                       
+                    </div>       
+                    <div class="form-group col-sm-12" style="margin-bottom: 10px;">
+                        <div class="form-group col-sm-2"><b for="email">Email:</b></div>
+                        <div class="form-group col-sm-10">
+                            <input type="text" class="form-control" id="email" placeholder="Email" name="email" 
+                            style="width: 100%" [(ngModel)]="object.email" [ngModelOptions]="{standalone: true}">
+                        </div>                       
+                    </div>                          
+                    <div class="form-group col-sm-12" style="margin-bottom: 10px;">
+                        <div class="form-group col-sm-2"><b for="comentario">Comentário:</b></div>
+                        <div class="form-group col-sm-10">
+                            <textarea class="form-control" id="comentario" rows="3" placeholder="Comentário"
+                            [(ngModel)]="object.comentario" [ngModelOptions]="{standalone: true}" style="width: 100%"></textarea>
+                        </div>                       
+                    </div>    
+                    <div class="form-group col-sm-12" style="margin-bottom: 10px;">
+                        <div class="form-group col-sm-8"></div>
+                        <div class="form-group col-sm-2">
+                            <button type="button" class="btn btn-outline-warning" (click)="limpaForm()">Limpar</button>
+                        </div>    
+                        <div class="form-group col-sm-2">
+                            <button type="button" class="btn btn-outline-success" (click)="enviar()">Enviar</button>
+                        </div>                                          
+                    </div>                       
+                </form>
+            </div> <br>                                           
+        </div>
+        <!-- IMAGEM DIREITA -->
+        <div class="col-sm" style="margin-top:5%;">
+            <div><br>
+                <img width="300" alt="Angular Logo" src="./../assets/images/0_n3DRTlqqLO7oXyuv.png">
+            </div>                   
+        </div>
+        </div>
+
+    </div>  
+    </div>
+
+
+    
+
